@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Regulation Prototype</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="header">
+	     <div class="container">
+	        <div class="row">
+	           <div class="col-md-5">
+	              <div class="logo">
+	                 <h1><a href="index.html">Regulation Prototype</a></h1>
+	              </div>
+	           </div>
+	           <div class="col-md-5">
+	              
+	           </div>
+	           <div class="col-md-2">
+	              <div class="navbar navbar-inverse" role="banner">
+	                  <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+	                    <ul class="nav navbar-nav">
+	                      <li class="dropdown">
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
+	                        <ul class="dropdown-menu animated fadeInUp">
+	                          <li><a href="profile.html">Profile</a></li>
+	                          <li><a href="login.html">Logout</a></li>
+	                        </ul>
+	                      </li>
+	                    </ul>
+	                  </nav>
+	              </div>
+	           </div>
+	        </div>
+	     </div>
+	</div>
+
+    <div class="page-content">
+    	<div class="row">
+		  <div class="col-md-2">
+		  	<div class="sidebar content-box" style="display: block;">
+                <ul class="nav">
+                    <!-- Main menu -->
+                    <li class="current"><a href="index.html"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+                    <li><a href="search.html"><i class="glyphicon glyphicon-tasks"></i> Search Regulations</a></li>
+                    <li><a href="status.html"><i class="glyphicon glyphicon-tasks"></i> Regulation Status</a></li>
+                    <li class="submenu">
+                         <a href="#">
+                            <i class="glyphicon glyphicon-list"></i> Pages
+                            <span class="caret pull-right"></span>
+                         </a>
+                         <!-- Sub menu -->
+                         <ul>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="signup.html">Signup</a></li>
+                        </ul>
+                    </li>
+                </ul>
+             </div>
+		  </div>
+		  <div class="col-md-10">
+
+		  	
+
+  			
+               <!-- Table of Regs -->
+  			
+
+  			<div class="content-box-large">
+  				<div class="panel-heading">
+					<div class="panel-title">Responsive DataTable</div>
+				</div>
+  				<div class="panel-body">
+  					<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+						<thead>
+							<tr>
+								<th>Regulation</th>
+								<th>Code</th>
+								<th>Category(s)</th>
+								<th>Institution</th>
+								<th>Current</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="odd">
+								<td>Regulatory Compliance Management</td>
+								<td>E - 13</td>
+								<td>Capital Adequacy Requirements</td>
+								<td class="center"> Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="even">
+								<td>Transitional Period Capital Floor Requirement for Institutions Using the Internal Ratings Based Approach to Credit Risk</td>
+								<td>A - 3 </td>
+								<td>Capital Adequacy Requirements</td>
+								<td class="center">Bank</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="odd">
+								<td>Capital Equivalency Deposit </td>
+								<td>A-10</td>
+								<td>Capital Adequacy Requirements</td>
+								<td class="center">FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="even ">
+								<td>Updates to Chapter 6 of Guideline A – Capital Adequacy Requirements</td>
+								<td>Draft - CAR</td>
+								<td>Capital Adequacy Requirements</td>
+								<td class="center">Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-remove-sign"></i></td>
+							</tr>
+							<tr class="odd">
+								<td>Liquidity Adequacy Requirements</td>
+								<td>LAR</td>
+								<td>Capital Adequacy Requirements</td>
+								<td class="center">Bank</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="even gradeA">
+								<td>Leverage Requirements</td>
+								<td>LR</td>
+								<td>Capital Adequacy Requirements</td>
+								<td class="center">Bank</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="odd">
+								<td>Prudent Person Approach</td>
+								<td>B-1</td>
+								<td>Prudential Limits and Restrictions</td>
+								<td class="center">Bank</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="even">
+								<td>Large Exposure Limits</td>
+								<td>B-2</td>
+								<td>Prudential Limits and Restrictions</td>
+								<td class="center">Bank</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="odd">
+								<td>Classification of Loans Guaranteed by Parent Bank</td>
+								<td>B-3</td>
+								<td>Prudential Limits and Restrictions</td>
+								<td class="center">Bank</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="even">
+								<td>Securities Lending</td>
+								<td>B-4</td>
+								<td>Prudential Limits and Restrictions</td>
+								<td class="center">Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-remove-sign"></i></td>
+							</tr>
+							<tr class="odd">
+								<td>Draft Materiality Criteria for Related Party Transactions</td>
+								<td>B-6</td>
+								<td>Prudential Limits and Restrictions</td>
+								<td class="center">Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							
+							<tr class="odd">
+								<td>IFRS 9 Financial Instruments and Disclosures</td>
+								<td>IFRS</td>
+								<td>Accounting and Disclosure</td>
+								<td class="center">Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="even">
+								<td>Impairment - Sound Credit Risk Assessment and Valuation Practices for Financial Instruments at Amortized Cost</td>
+								<td>C-1</td>
+								<td>Accounting and Disclosure</td>
+								<td class="center">Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="odd">
+								<td>Collective Allowances - Sound Credit Risk Assessment and Valuation Practices for Financial Instruments at Amortized Cost</td>
+								<td>C-5</td>
+								<td>Accounting and Disclosure</td>
+								<td class="center">Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="even">
+								<td>Annual Disclosures</td>
+								<td>D-1</td>
+								<td>Accounting and Disclosure</td>
+								<td class="center">Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="odd">
+								<td>Accounting for Financial Instruments Designated as Fair Value Option</td>
+								<td>D-10</td>
+								<td>Accounting and Disclosure</td>
+								<td class="center">Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="even">
+								<td>Public Capital Disclosure Requirements related to Basel III Leverage Ratio</td>
+								<td>D-12</td>
+								<td>Accounting and Disclosure</td>
+								<td class="center">Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="odd">
+								<td>Corporate Governance Guideline</td>
+								<td>CGG</td>
+								<td>Sound Business and Financial Practices</td>
+								<td class="center">Bank</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="even">
+								<td>Derivatives Sound Practices</td>
+								<td>B-7</td>
+								<td>Sound Business and Financial Practices</td>
+								<td class="center">Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<<tr class="odd">
+								<td>Deterring & Detecting Money Laundering and Terrorist Financing</td>
+								<td>B-8</td>
+								<td>Sound Business and Financial Practices</td>
+								<td class="center">Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="even">
+								<td>Guideline - Interest Rate Risk (IRR) Management</td>
+								<td>B-12</td>
+								<td>Sound Business and Financial Practices</td>
+								<td class="center">Bank</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="odd">
+								<td>Residential Mortgage Underwriting Practices and Procedures </td>
+								<td>B-20</td>
+								<td>Sound Business and Financial Practices</td>
+								<td class="center">Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="even">
+								<td>Background Checks on Directors and Senior Management of FREs</td>
+								<td>E-17</td>
+								<td>Sound Business and Financial Practices</td>
+								<td class="center">Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="odd">
+								<td>Stress Testing</td>
+								<td>E-18</td>
+								<td>Sound Business and Financial Practices</td>
+								<td class="center">Bank</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="even">
+								<td>Internal Capital Adequacy Assessment Process (ICAAP)</td>
+								<td>E-19</td>
+								<td>Sound Business and Financial Practices</td>
+								<td class="center">Bank</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="odd">
+								<td>Operational Risk Management</td>
+								<td>E-21</td>
+								<td>Sound Business and Financial Practices</td>
+								<td class="center">Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-ok"></i></td>
+							</tr>
+							<tr class="even">
+								<td>Margin Requirements for Non-Centrally Cleared Derivatives</td>
+								<td>E-22</td>
+								<td>Sound Business and Financial Practices</td>
+								<td class="center">Bank, FBB</td>
+								<td class="center"><i class="glyphicon glyphicon-remove-sign"></i></td>
+							</tr>
+							
+						</tbody>
+					</table>
+  				</div>
+  			</div>
+
+<br /><br /><br />
+<br />
+<br />
+
+
+		  </div>
+		</div>
+    </div>
+
+    <footer>
+         <div class="container">
+         
+            <div class="copy text-center">
+               Copyright 2016 <a href='#'>Website</a>
+            </div>
+            
+         </div>
+      </footer>
+
+      <link href="vendors/datatables/dataTables.bootstrap.css" rel="stylesheet" media="screen">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="vendors/datatables/js/jquery.dataTables.min.js"></script>
+
+    <script src="vendors/datatables/dataTables.bootstrap.js"></script>
+
+    <script src="js/custom.js"></script>
+    <script src="js/tables.js"></script>
+  </body>
+</html>
