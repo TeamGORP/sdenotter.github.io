@@ -1,3 +1,43 @@
+.searchButton {
+    color: white;
+}
+
+.resultTitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+.searchResults {
+    list-style-type: none;
+    padding-top: 20px;
+}
+
+.searchTitle {
+    font-size: 18px;
+}
+
+.searchBody {
+    padding-top: 20px;
+    
+}
+.searchExtras {
+    padding-top: 35px;
+}
+.listNone {
+     list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #f7f7f7;
