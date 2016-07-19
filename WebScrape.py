@@ -69,5 +69,5 @@ for i in urls:
     html = urlopen(i)
     page_content = html.read()
     
-    with open(i.split('/')[-1], 'w+') as file_: 
+    with open(i.split('/')[-1]+".html", 'w+') as file_: 
         file_.write(str(page_content))
