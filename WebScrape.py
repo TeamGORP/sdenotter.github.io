@@ -77,31 +77,62 @@ for i in urls:
         file_.write(str(page_content))
 
 ######Regs
-html = urlopen('http://laws-lois.justice.gc.ca/eng/acts/B-1.01/FullText.html')
-page_content = html.read()
-    
 res = requests.get("http://laws-lois.justice.gc.ca/eng/acts/B-1.01/FullText.html")
 webSoup = bs4.BeautifulSoup(res.text, "lxml")   
-with open('bank_act.html', 'w+') as file_: 
-    file_.write(str(webSoup))    
+with open('bank_act.html', 'wb') as file_: 
+    file_.write(webSoup.prettify("utf-8"))    
     
-with open('bank_act.html', 'w+') as file_: 
-    file_.write(str(page_content))
+res = requests.get('http://laws-lois.justice.gc.ca/eng/acts/B-1.01/20150623/P1TT3xt3.html')
+webSoup = bs4.BeautifulSoup(res.text, "lxml")      
+with open('previous_bank_act.html', 'wb') as file_: 
+    file_.write(webSoup.prettify("utf-8")) 
     
-html = urlopen('http://laws-lois.justice.gc.ca/eng/acts/B-1.01/20150623/P1TT3xt3.html')
-page_content = html.read()
+res = requests.get('http://laws-lois.justice.gc.ca/eng/acts/O-2.7/FullText.html')
+webSoup = bs4.BeautifulSoup(res.text, "lxml")  
+with open('office_of_the_superintendent_of_financial_institutions_act.html', 'wb') as file_: 
+    file_.write(webSoup.prettify("utf-8")) 
     
-with open('previous_bank_act.html', 'w+') as file_: 
-    file_.write(str(page_content))
+res = requests.get('http://laws-lois.justice.gc.ca/eng/acts/O-2.7/20140619/P1TT3xt3.html')
+webSoup = bs4.BeautifulSoup(res.text, "lxml")     
+with open('previous_office_of_the_superintendent_of_financial_institutions_act.html', 'wb') as file_: 
+    file_.write(webSoup.prettify("utf-8")) 
     
-html = urlopen('http://laws-lois.justice.gc.ca/eng/acts/O-2.7/FullText.html')
-page_content = html.read()
+    res = requests.get('http://laws-lois.justice.gc.ca/eng/acts/O-2.7/20140619/P1TT3xt3.html')
+webSoup = bs4.BeautifulSoup(res.text, "lxml")     
+with open('previous_office_of_the_superintendent_of_financial_institutions_act.html', 'wb') as file_: 
+    file_.write(webSoup.prettify("utf-8")) 
+#NEW Regs   
+res = requests.get('http://laws.justice.gc.ca/eng/regulations/SOR-2000-177/FullText.html')
+webSoup = bs4.BeautifulSoup(res.text, "lxml")     
+with open('Canada Deposit Insurance Corporation Notice Regulations (Compensation in Respect of the Restructuring of Federal Member Institutions).html', 'wb') as file_: 
+    file_.write(webSoup.prettify("utf-8")) 
     
-with open('office_of_the_superintendent_of_financial_institutions_act.html', 'w+') as file_: 
-    file_.write(str(page_content))
+res = requests.get('http://laws.justice.gc.ca/eng/regulations/SOR-2007-255/FullText.html')
+webSoup = bs4.BeautifulSoup(res.text, "lxml")     
+with open('Eligible Financial Contract Regulations (Canada Deposit Insurance Corporation Act).html', 'wb') as file_: 
+    file_.write(webSoup.prettify("utf-8")) 
     
-html = urlopen('http://laws-lois.justice.gc.ca/eng/acts/O-2.7/20140619/P1TT3xt3.html')
-page_content = html.read()
+res = requests.get('http://laws.justice.gc.ca/eng/regulations/SOR-2007-255/20160614/P1TT3xt3.html')
+webSoup = bs4.BeautifulSoup(res.text, "lxml")     
+with open('Previous Eligible Financial Contract Regulations (Canada Deposit Insurance Corporation Act).html', 'wb') as file_: 
+    file_.write(webSoup.prettify("utf-8")) 
     
-with open('previous_office_of_the_superintendent_of_financial_institutions_act.html', 'w+') as file_: 
-    file_.write(str(page_content))
+res = requests.get('http://laws.justice.gc.ca/eng/acts/F-11/FullText.html')
+webSoup = bs4.BeautifulSoup(res.text, "lxml")     
+with open('Financial Administration Act.html', 'wb') as file_: 
+    file_.write(webSoup.prettify("utf-8")) 
+    
+res = requests.get('http://laws.justice.gc.ca/eng/acts/F-11/20160101/P1TT3xt3.html')
+webSoup = bs4.BeautifulSoup(res.text, "lxml")     
+with open('previous Financial Administration Act.html', 'wb') as file_: 
+    file_.write(webSoup.prettify("utf-8")) 
+    
+res = requests.get('http://laws.justice.gc.ca/eng/acts/C-3/FullText.html')
+webSoup = bs4.BeautifulSoup(res.text, "lxml")     
+with open('Canada Deposit Insurance Corporation Act.html', 'wb') as file_: 
+    file_.write(webSoup.prettify("utf-8")) 
+    
+res = requests.get('http://laws.justice.gc.ca/eng/acts/C-3/20140619/P1TT3xt3.html')
+webSoup = bs4.BeautifulSoup(res.text, "lxml")     
+with open('Previous Canada Deposit Insurance Corporation Act.html', 'wb') as file_: 
+    file_.write(webSoup.prettify("utf-8")) 
