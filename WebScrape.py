@@ -63,11 +63,45 @@ urls = ['http://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/a3.aspx'
 'http://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/e22.aspx',
 'http://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/e4b.aspx',
 'http://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/b5a.aspx',
-'http://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/a10fbb.aspx']
+'http://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/a10fbb.aspx',
+'http://laws-lois.justice.gc.ca/eng/acts/O-2.7/FullText.html',
+'http://laws-lois.justice.gc.ca/eng/acts/B-1.01/FullText.html']
+
+CDIC = 'http://www.cdic.ca/en/financial-community/legislation-bylaws/Pages/default.aspx'
 
 for i in urls:
     html = urlopen(i)
     page_content = html.read()
     
-    with open(i.split('/')[-1]+".html", 'w+') as file_: 
+    with open(i.split('/')[-1], 'w+') as file_: 
         file_.write(str(page_content))
+
+######Regs
+html = urlopen('http://laws-lois.justice.gc.ca/eng/acts/B-1.01/FullText.html')
+page_content = html.read()
+    
+res = requests.get("http://laws-lois.justice.gc.ca/eng/acts/B-1.01/FullText.html")
+webSoup = bs4.BeautifulSoup(res.text, "lxml")   
+with open('bank_act.html', 'w+') as file_: 
+    file_.write(str(webSoup))    
+    
+with open('bank_act.html', 'w+') as file_: 
+    file_.write(str(page_content))
+    
+html = urlopen('http://laws-lois.justice.gc.ca/eng/acts/B-1.01/20150623/P1TT3xt3.html')
+page_content = html.read()
+    
+with open('previous_bank_act.html', 'w+') as file_: 
+    file_.write(str(page_content))
+    
+html = urlopen('http://laws-lois.justice.gc.ca/eng/acts/O-2.7/FullText.html')
+page_content = html.read()
+    
+with open('office_of_the_superintendent_of_financial_institutions_act.html', 'w+') as file_: 
+    file_.write(str(page_content))
+    
+html = urlopen('http://laws-lois.justice.gc.ca/eng/acts/O-2.7/20140619/P1TT3xt3.html')
+page_content = html.read()
+    
+with open('previous_office_of_the_superintendent_of_financial_institutions_act.html', 'w+') as file_: 
+    file_.write(str(page_content))
