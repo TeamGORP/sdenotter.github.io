@@ -1,6 +1,7 @@
 import bs4
 import requests
 from urllib.request import urlopen
+import sys
 
 #automated links
 res = requests.get("http://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/default.aspx")
@@ -80,7 +81,17 @@ for i in urls:
 res = requests.get("http://laws-lois.justice.gc.ca/eng/acts/B-1.01/FullText.html")
 webSoup = bs4.BeautifulSoup(res.text, "lxml")   
 with open('bank_act.html', 'wb') as file_: 
-    file_.write(webSoup.prettify("utf-8"))    
+    file_.write(webSoup.prettify(formatter="html"))    
+    
+###Text Scraper
+txt = webSoup.get_text()      
+with open('bank_act.txt', 'w+') as file_: 
+    file_.write(webSoup.prettify(formatter="none"))
+   
+   
+    file_.write(txt.encode(sys.stdout.encoding, errors='replace'))
+    
+    
     
 res = requests.get('http://laws-lois.justice.gc.ca/eng/acts/B-1.01/20150623/P1TT3xt3.html')
 webSoup = bs4.BeautifulSoup(res.text, "lxml")      
@@ -90,7 +101,7 @@ with open('previous_bank_act.html', 'wb') as file_:
 res = requests.get('http://laws-lois.justice.gc.ca/eng/acts/O-2.7/FullText.html')
 webSoup = bs4.BeautifulSoup(res.text, "lxml")  
 with open('office_of_the_superintendent_of_financial_institutions_act.html', 'wb') as file_: 
-    file_.write(webSoup.prettify("utf-8")) 
+    file_.write(webSoup.prettify("utf-8")) (webSoup.get_text())
     
 res = requests.get('http://laws-lois.justice.gc.ca/eng/acts/O-2.7/20140619/P1TT3xt3.html')
 webSoup = bs4.BeautifulSoup(res.text, "lxml")     
