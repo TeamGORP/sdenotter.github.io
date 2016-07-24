@@ -91,7 +91,12 @@ with open('bank_act.txt', 'w+') as file_:
    
     file_.write(txt.encode(sys.stdout.encoding, errors='replace'))
     
-    
+fileIn = open("d:/Users/Fred/Documents/GitHub/sdenotter.github.io/complete_list_of_federal_statutes/A-1.5.xml", 'rb')   
+webSoup = bs4.BeautifulSoup(fileIn,"lxml-xml")
+with open('A-1.5.txt', 'w+') as fileOut: 
+    fileOut.write(webSoup.webSoup.get_text()) 
+
+
     
 res = requests.get('http://laws-lois.justice.gc.ca/eng/acts/B-1.01/20150623/P1TT3xt3.html')
 webSoup = bs4.BeautifulSoup(res.text, "lxml")      
