@@ -89,12 +89,13 @@ with open('bank_act.txt', 'w+') as file_:
     file_.write(webSoup.prettify(formatter="none"))
    
    
-    file_.write(txt.encode(sys.stdout.encoding, errors='replace'))
+webSoup.prettify(webSoup.get_text())
     
 fileIn = open("d:/Users/Fred/Documents/GitHub/sdenotter.github.io/complete_list_of_federal_statutes/A-1.5.xml", 'rb')   
 webSoup = bs4.BeautifulSoup(fileIn,"lxml-xml")
-with open('A-1.5.txt', 'w+') as fileOut: 
-    fileOut.write(webSoup.webSoup.get_text()) 
+with open('A-1.5.txt', 'wb') as fileOut: 
+    fileOut.write(webSoup.get_text().encode("utf-8")) 
+    
 
 
     
