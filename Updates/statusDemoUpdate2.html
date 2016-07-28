@@ -5,11 +5,14 @@
     <title>Regulation Prototype</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
 
 
-    
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
@@ -18,7 +21,7 @@
             <div class="row">
                 <div class="col-md-5">
                     <div class="logo">
-                        <h1><a href="index.html">Regulation Prototype</a></h1>
+                        <h1><a href="../index.html">Regulation Prototype</a></h1>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -31,8 +34,8 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
                                     <ul class="dropdown-menu animated fadeInUp">
-                                        <li><a href="profile.html">Profile</a></li>
-                                        <li><a href="login.html">Logout</a></li>
+                                        <li><a href="../profile.html">Profile</a></li>
+                                        <li><a href="../login.html">Logout</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -49,9 +52,9 @@
                 <div class="sidebar content-box" style="display: block;">
                     <ul class="nav">
                         <!-- Main menu -->
-                        <li class="current"><a href="index.html"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
-                        <li><a href="search.html"><i class="glyphicon glyphicon-tasks"></i> Search Regulations</a></li>
-                        <li><a href="status.html"><i class="glyphicon glyphicon-tasks"></i> Regulation Status</a></li>
+                        <li class="current"><a href="../index.html"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+                        <li><a href="../search.html"><i class="glyphicon glyphicon-tasks"></i> Search Regulations</a></li>
+                        <li><a href="../status.html"><i class="glyphicon glyphicon-tasks"></i> Regulation Status</a></li>
                         <li class="submenu">
                             <a href="#">
                                 <i class="glyphicon glyphicon-list"></i> Pages
@@ -86,7 +89,7 @@
                     <div class="panel-body">
                        <ul class="listNone">
                            <li>Last Update Nov 2014</li>
-                           <li>Similarity Score: 62%</li>
+                           <li>Similarity Score: N/A</li>
                            <li>...</li>
                            <li>More text analysis metrics</li>
                        </ul>
@@ -94,15 +97,16 @@
                        <div class="row">
                            <div class= "col-sm-6">
                                <ul class="listNone">
-                                    <li class = "searchTitle">Regulatory Compliance Management (RCM)</li>
-                                    <li class="searchBody"><p>I. Purpose and Scope of the Guideline <br/><br/>
-        The purpose of the RCM guideline is to communicate OSFI’s expectations with respect to the management of <mark>regulatory compliance risk</mark> by federally regulated financial institutions (FRFIs)Footnote 1. <br/><br/>
+                                    <li class = "searchTitle">Liquidity Adequacy Requirements (LAR)</li>
+                                    <li class="searchBody"><p>Chapter 1 – Overview Date: November 2014<br/><br/>
+       Subsection 485(1) and 949(1) of the Bank Act (BA), subsection 473(1) of the Trust and Loan Companies Act (TLCA) and subsection 409(1) of the Cooperative Credit Associations Act (CCAA) require banks, bank holding companies, trust and loan companies and cooperative retail associations, respectively, to maintain adequate and appropriate forms of liquidity. <br/><br/>
 
-        This guideline revises and replaces the 2004 <mark>LCM Guideline</mark> to better align it with guidance provided by more recently updated OSFI GuidelinesFootnote 2 and complements OSFI’s Supervisory <mark>Framework</mark> and <mark>Assessment</mark> Criteria. <br/><br/>
+        TThe LAR Guideline is not made pursuant to subsection 485(2) or 949(2) of the BA, subsection 473(2) of the TLCA or subsection 409(2) of the CCAA. However, the liquidity metrics set out in this guideline provide the framework within which the Superintendent assesses whether a bank, a bank holding company, a trust and loan company or cooperative credit association maintains adequate liquidity pursuant to the Acts. For this purpose, the Superintendent has established two minimum standards: the Liquidity Coverage Ratio (LCR) and the Net Stable Funding Ratio (NSFR). These standards – in conjunction with additional liquidity metrics where OSFI reserves the right to apply supervisory requirements as needed, including the net cumulative cash flow (NCCF), the liquidity monitoring tools and the intraday liquidity monitoring tools – when assessed as a package, provide an overall perspective of the liquidity adequacy of an institution. <br/><br/>
 
-        The guideline also elaborates on a number of principles regarding key controls as part of RCM.</p></li>
+        OSFI, as a member of the BCBS, participated in the development of the international liquidity framework, including Basel III: The Liquidity Coverage Ratio and liquidity risk monitoring tools (January 2013), Basel III: the Net Stable Funding Ratio - consultative document (January 2014) and Monitoring tools for intraday liquidity management (April 2013).</p></li>
                                <ul>
                            </div>
+                           <!--
                            <div class="col-sm-6">
                                <ul class="listNone">
                                     <li class = "searchTitle">Legislative Compliance Management (LCM)</li>
@@ -117,6 +121,7 @@
                                <ul>
                                
                            </div>
+                           -->
                        </div>
 
                     </div>
@@ -139,21 +144,21 @@
         </div>
     </footer>
 
-    <link href="vendors/datatables/dataTables.bootstrap.css" rel="stylesheet" media="screen">
+    <link href="../vendors/datatables/dataTables.bootstrap.css" rel="stylesheet" media="screen">
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- jQuery UI -->
     <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
 
-    <script src="vendors/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../vendors/datatables/js/jquery.dataTables.min.js"></script>
 
-    <script src="vendors/datatables/dataTables.bootstrap.js"></script>
+    <script src="../vendors/datatables/dataTables.bootstrap.js"></script>
 
-    <script src="js/custom.js"></script>
-    <script src="js/tables.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/tables.js"></script>
 </body>
 
 </html>
