@@ -45,8 +45,17 @@
      color:black;
 }
 
-.details {
+.gapText {
     
+    outline: none;
+    resize: none;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+    
+}
+
+.fx {
+    position: fixed;
 }
 
 
