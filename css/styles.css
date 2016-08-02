@@ -34,7 +34,20 @@
     margin-bottom: 15px;
 }
 
+.add {
+    background: #90EE90;
+    opacity: 0.5;
+}
 
+.remove {
+    background-color: red;
+     opacity: 0.5;
+     color:black;
+}
+
+.details {
+    
+}
 
 
 
