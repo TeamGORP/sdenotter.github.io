@@ -48,7 +48,7 @@
                     <li class="current"><a href="../../index.html"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
                      <li><a href="../../search.html"><i class="glyphicon glyphicon-tasks"></i> Search Regulations</a></li>
                     <li><a href="../../status.html"><i class="glyphicon glyphicon-tasks"></i> Regulation Status</a></li>
-                    <li><a href="gapAnalysis.html"><i class="glyphicon glyphicon-tasks"></i>Gap Analysis</a></li>
+                    <li><a href="gapAnalysis.html"><i class="glyphicon glyphicon-tasks"></i>Bank Gap Analysis</a></li>
                 </ul>
              </div>
 		  </div>
@@ -92,6 +92,45 @@
 
 
 			  				</div>
+                              <div class = "col-md-5">
+            <div class="row>">
+            <br /><br /><br />
+                 <div class = "fx">
+                         <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+                                <thead>
+                                    <tr>
+                                        <th>Select</th>
+                                        <th>Regulations</th>
+                                        <th>Requirements</th>
+                                        <th>Type of Change</th>
+                                    </tr>
+                                </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td><INPUT type="checkbox" name="chk"/></td>
+                                            <td>Operational Risk Management</td>
+                                            <td><textarea class="gapText"></textarea></td>
+                                            <td><SELECT NAME="Change">
+                                                <OPTION SELECTED> Addition
+                                                <OPTION> Deletion
+                                                <OPTION> No Change
+                                                </SELECT>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                            </table>
+                            <p>
+                              <INPUT type="button" value="+" onclick="addRow('example')" />
+                              <INPUT type="button" value="-" onclick="deleteRow('example')" />
+                            </p>
+                            <p><button class="btn"><a href="../../gapAnalysis.html">Send To Gap Analysis</button></p>
+                </div>
+            </div>
+
+
+
+        </div>
 			  			</div>
 					</div>
 
