@@ -5,7 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/styles.css" rel="stylesheet">
+    <SCRIPT language="javascript">
+  		function addRow(tableID) {
 
+        var table = document.getElementById(tableID);
+
+        var rowCount = table.rows.length;
+  			var row = table.insertRow(rowCount);
+
+        var colCount = table.rows[0].cells.length;
+
+        var cell1 = row.insertCell(0);
+  	  	cell1.innerHTML = table.rows[1].cells[0].innerHTML
+
+  			var cell2 = row.insertCell(1);
+        cell2.innerHTML = table.rows[1].cells[1].innerHTML;
+
+  			var cell3 = row.insertCell(2);
+  			cell3.innerHTML = table.rows[1].cells[2].innerHTML;
+
+        var cell4 = row.insertCell(3);
+        cell4.innerHTML = table.rows[1].cells[3].innerHTML;
+  		}
+
+  		function deleteRow(tableID) {
+  			try {
+  			var table = document.getElementById(tableID);
+  			var rowCount = table.rows.length;
+
+  			for(var i=0; i<rowCount; i++) {
+  				var row = table.rows[i];
+  				var chkbox = row.cells[0].childNodes[0];
+  				if(null != chkbox && true == chkbox.checked) {
+        		table.deleteRow(i);
+  					rowCount--;
+  					i--;
+  				}
+  			}
+  			}catch(e) {
+  				alert(e);
+  			}
+  		}
+
+  	</SCRIPT>
 
   </head>
   <body>
@@ -400,32 +442,32 @@
                          <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
                                 <thead>
                                     <tr>
+                                        <th>Select</th>
                                         <th>Regulations</th>
-                                        <th>Code</th>
-                                        <th>Issues with Bank Practice</th>
-                                        <th>Gap (Y/N)</th>
-                                        <th>If Gap, Corrective Action</th>
-                                        <th>Due Date</th>
+                                        <th>Requirements</th>
+                                        <th>Type of Change</th>
                                     </tr>
                                 </thead>
                                     <tbody>
 
                                         <tr>
+                                            <td><INPUT type="checkbox" name="chk"/></td>
                                             <td>Operational Risk Management</td>
-                                            <td>E-21</td>
                                             <td><textarea class="gapText"></textarea></td>
-                                            <td>
-                                                <select name="Gap">
-                                                    <option value="Yes">Yes</option>
-                                                    <option value="No">No</option>
-                                                </select>
+                                            <td><SELECT NAME="Change">
+                                                <OPTION SELECTED> Addition
+                                                <OPTION> Deletion
+                                                <OPTION> No Change
+                                                </SELECT>
                                             </td>
-                                            <td><textarea class="gapText"></textarea></td>
-                                            <td>N/A</td>
                                         </tr>
                                     </tbody>
                             </table>
-                             <p><button class="btn">Save</button></p>
+                            <p>
+                              <INPUT type="button" value="+" onclick="addRow('example')" />
+                              <INPUT type="button" value="-" onclick="deleteRow('example')" />
+                            </p>
+                            <p><button class="btn">Send To Gap Analysis</button></p>
                 </div>
             </div>
 
@@ -446,6 +488,5 @@
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
   </body>
 </html>
