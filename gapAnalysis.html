@@ -10,15 +10,39 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 
-    <script type="text/javascript" src="text/tableExport.js"></script>
-    <script type="text/javascript" src="text/jquery.base64.js"></script>
-    <script type="text/javascript" src="text/jspdf/libs/sprintf.js"></script>
-    <script type="text/javascript" src="text/jspdf/jspdf.js"></script>
-    <script type="text/javascript" src="text/jspdf/libs/base64.js"></script>
+    <script type="text/javascript" src="tableExport.js"></script>
+    <script type="text/javascript" src="jquery.base64.js"></script>
+    <script type="text/javascript" src="jspdf/libs/sprintf.js"></script>
+    <script type="text/javascript" src="jspdf/jspdf.js"></script>
+    <script type="text/javascript" src="jspdf/libs/base64.js"></script>
 
     <script type="text/javaScript">
-		  $(document).ready(function(){});
-	  </script>
+
+  		$(document).ready(function(){
+
+  			//var curl = $(location).attr('href');
+  			var curl = location.href.split("/").slice(-1);
+
+  			var aurl = "";
+  			$('li > a').each(function() {
+  				aurl = $(this).attr('href').split("/").slice(-1);
+  				if ("'"+curl+"'" == "'"+aurl+"'"){
+  				$(this).parent().parent().parent().addClass('active');
+  				$(this).parent().parent().parent().parent().addClass('active');
+  				$(this).parent().parent().parent().parent().parent().addClass('active');
+  				$(this).parent().parent().parent().parent().parent().parent().addClass('active');
+  				$(this).parent().parent().parent().parent().parent().parent().parent().addClass('active');
+  				}
+  			});
+
+
+  		});
+    </script>
+
+    <script type="text/javaScript">
+  		$(document).ready(function(){
+  		});
+  	</script>
   </head>
   <body>
   	<div class="header">
@@ -69,6 +93,7 @@
 	  			<div class="row">
 					<div class="col-md-10 ">
 						<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+              <col height="500">
                              <thead>
                                   <tr>
                                       <th>Regulations</th>
@@ -164,15 +189,15 @@
 
                         	   <button class="btn" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Data</button>
                         	     <ul class="dropdown-menu " role="menu">
-                                   <li><a href="#" onClick ="$('#example').tableExport({type:'xml',escape:'false'});"> XML</a></li>
+                                   <li><a href="#!" onClick ="$('#example').tableExport({type:'xml',escape:'false'});"> XML</a></li>
                                    <li class="divider"></li>
-                                   <li><a href="#" onClick ="$('#example').tableExport({type:'csv',escape:'false'});"> CSV</a></li>
+                                   <li><a href="#!" onClick ="$('#example').tableExport({type:'csv',escape:'false'});"> CSV</a></li>
                                    <li class="divider"></li>
-                                   <li><a href="#" onClick ="$('#example').tableExport({type:'excel',escape:'false'});"> XLXS</a></li>
+                                   <li><a href="#!" onClick ="$('#example').tableExport({type:'excel',escape:'false'});"> XLXS</a></li>
                                    <li class="divider"></li>
-                                   <li><a href="#" onClick ="$('#example').tableExport({type:'png',escape:'false'});"> PNG</a></li>
+                                   <li><a href="#!" onClick ="$('#example').tableExport({type:'png',escape:'false'});"> PNG</a></li>
                                    <li class="divider"></li>
-                                   <li><a href="#" onClick ="$('#example').tableExport({type:'pdf',pdfFontSize:'7',escape:'false'});"> PDF</a></li>
+                                   <li><a href="#!" onClick ="$('#example').tableExport({type:'pdf',pdfFontSize:'7',escape:'false'});"> PDF</a></li>
                               </ul>
                           </p>
                     </div>
