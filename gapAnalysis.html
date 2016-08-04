@@ -7,7 +7,40 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- styles -->
     <link href="css/styles.css" rel="stylesheet">
-
+    <script type="text/javascript" src="/media/js/site.js?_=fdce5da0aafc74f877db6a1772eccba9">
+  	</script>
+  	<script type="text/javascript" src="/media/js/dynamic.php?comments-page=extensions%2Fbuttons%2Fexamples%2Finitialisation%2Fexport.html" async>
+  	</script>
+  	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.3.js">
+  	</script>
+  	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js">
+  	</script>
+  	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js">
+  	</script>
+  	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js">
+  	</script>
+  	<script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js">
+  	</script>
+  	<script type="text/javascript" language="javascript" src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js">
+  	</script>
+  	<script type="text/javascript" language="javascript" src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js">
+  	</script>
+  	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js">
+  	</script>
+  	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js">
+  	</script>
+  	<script type="text/javascript" language="javascript" src="../../../../examples/resources/demo.js">
+  	</script>
+    <script type="text/javascript" class="init">
+      $(document).ready(function() {
+      	$('#example').DataTable( {
+      		dom: 'Bfrtip',
+      		buttons: [
+      			'copy', 'csv', 'excel', 'pdf', 'print'
+      		]
+      	} );
+      } );
+    </script>
 
   </head>
   <body>
@@ -147,7 +180,11 @@
                 <div class="row">
                     <div class="col-md-4">
 
-                        <p><button class="btn">Export to Excel</button></p>
+                        <p>
+                          <button class="btn">Save</button>
+                          <button class="btn">Export to Excel</button>
+                          <button class="btn">Send To</button>
+                        </p>
                     </div>
                     <br /><br />
                 </div>
