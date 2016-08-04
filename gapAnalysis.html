@@ -1,47 +1,24 @@
 <!DOCTYPE html>
 <html>
-   <head>
+  <head>
     <title>Regulations Manager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- styles -->
     <link href="css/styles.css" rel="stylesheet">
-    <script type="text/javascript" src="/media/js/site.js?_=fdce5da0aafc74f877db6a1772eccba9">
-  	</script>
-  	<script type="text/javascript" src="/media/js/dynamic.php?comments-page=extensions%2Fbuttons%2Fexamples%2Finitialisation%2Fexport.html" async>
-  	</script>
-  	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.3.js">
-  	</script>
-  	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js">
-  	</script>
-  	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js">
-  	</script>
-  	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js">
-  	</script>
-  	<script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js">
-  	</script>
-  	<script type="text/javascript" language="javascript" src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js">
-  	</script>
-  	<script type="text/javascript" language="javascript" src="//cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js">
-  	</script>
-  	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js">
-  	</script>
-  	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js">
-  	</script>
-  	<script type="text/javascript" language="javascript" src="../../../../examples/resources/demo.js">
-  	</script>
-    <script type="text/javascript" class="init">
-      $(document).ready(function() {
-      	$('#example').DataTable( {
-      		dom: 'Bfrtip',
-      		buttons: [
-      			'copy', 'csv', 'excel', 'pdf', 'print'
-      		]
-      	} );
-      } );
-    </script>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+    <script type="text/javascript" src="text/tableExport.js"></script>
+    <script type="text/javascript" src="text/jquery.base64.js"></script>
+    <script type="text/javascript" src="text/jspdf/libs/sprintf.js"></script>
+    <script type="text/javascript" src="text/jspdf/jspdf.js"></script>
+    <script type="text/javascript" src="text/jspdf/libs/base64.js"></script>
+
+    <script type="text/javaScript">
+		  $(document).ready(function(){});
+	  </script>
   </head>
   <body>
   	<div class="header">
@@ -83,7 +60,7 @@
                     <li class="current"><a href="index.html"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
                      <li><a href="search.html"><i class="glyphicon glyphicon-tasks"></i> Search Regulations</a></li>
                     <li><a href="status.html"><i class="glyphicon glyphicon-tasks"></i> Regulation Status</a></li>
-                    <li><a href="gapAnalysis.html"><i class="glyphicon glyphicon-tasks"></i>Gap Analysis</a></li>
+                    <li><a href="gapAnalysis.html"><i class="glyphicon glyphicon-tasks"></i> Gap Analysis</a></li>
                 </ul>
              </div>
 		  </div>
@@ -182,9 +159,22 @@
 
                         <p>
                           <button class="btn">Save</button>
-                          <button class="btn">Export to Excel</button>
-                          <button class="btn">Send To</button>
-                        </p>
+                          <button class="btn">Email</button>
+
+
+                        	   <button class="btn" data-toggle="dropdown"><i class="fa fa-bars"></i> Export Data</button>
+                        	     <ul class="dropdown-menu " role="menu">
+                                   <li><a href="#" onClick ="$('#example').tableExport({type:'xml',escape:'false'});"> XML</a></li>
+                                   <li class="divider"></li>
+                                   <li><a href="#" onClick ="$('#example').tableExport({type:'csv',escape:'false'});"> CSV</a></li>
+                                   <li class="divider"></li>
+                                   <li><a href="#" onClick ="$('#example').tableExport({type:'excel',escape:'false'});"> XLXS</a></li>
+                                   <li class="divider"></li>
+                                   <li><a href="#" onClick ="$('#example').tableExport({type:'png',escape:'false'});"> PNG</a></li>
+                                   <li class="divider"></li>
+                                   <li><a href="#" onClick ="$('#example').tableExport({type:'pdf',pdfFontSize:'7',escape:'false'});"> PDF</a></li>
+                              </ul>
+                          </p>
                     </div>
                     <br /><br />
                 </div>
